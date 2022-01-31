@@ -24,15 +24,18 @@ playButton.addEventListener("click", function () {
     intro.classList.add("fadeOut");
     // 成功
 });
-playerRock.addEventListener("click", function (resolve,reject) {
-    hands.innerHTML=` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />
+playerRock.addEventListener("click", function (resolve, reject) {
+    hands.innerHTML = ` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />
     <img id="computer-hand" class="computer-hand" src="./assets/rock.png" alt="" />`;
-    let first=new Promise(function(resolve,reject){
-        hands.innerHTML=` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />
+    let first = new Promise(function (resolve, reject) {
+        hands.innerHTML = ` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />
         <img id="computer-hand" class="computer-hand shake-computer" src="./assets/rock.png" alt="" />`;
-        setTimeout(function(){
+        playerRock.style.pointerEvents = "none";
+        playerPaper.style.pointerEvents = "none";
+        playerScissors.style.pointerEvents = "none";
+        setTimeout(function () {
             resolve()
-        },1000);
+        }, 1000);
     });
     first.then(function () {
         computerChoose();
@@ -53,23 +56,28 @@ playerRock.addEventListener("click", function (resolve,reject) {
             playerScore.innerHTML = "<h2>Player</h2>"
                 + `<p>${j}</p>`;
         };
+        playerRock.style.pointerEvents = "auto";
+        playerPaper.style.pointerEvents = "auto";
+        playerScissors.style.pointerEvents = "auto";
     })
 });
 playerPaper.addEventListener("click", function () {
-    hands.innerHTML=` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />
-    <img id="computer-hand" class="computer-hand" src="./assets/rock.png" alt="" />`;
-    let first=new Promise(function(resolve,reject){
-        hands.innerHTML=` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />
-        <img id="computer-hand" class="computer-hand shake-computer" src="./assets/rock.png" alt="" />`;
-        setTimeout(function(){
+    hands.innerHTML = ` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />`
+    + `<img id="computer-hand" class="computer-hand" src="./assets/rock.png" alt="" />`;
+    let first = new Promise(function (resolve, reject) {
+        hands.innerHTML = ` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />`
+        + `<img id="computer-hand" class="computer-hand shake-computer" src="./assets/rock.png" alt="" />`;
+        playerRock.style.pointerEvents = "none";
+        playerPaper.style.pointerEvents = "none";
+        playerScissors.style.pointerEvents = "none";
+        setTimeout(function () {
             resolve()
-        },1000);
+        }, 1000);
     });
-    first.then(function(){
+    first.then(function () {
         computerChoose();
         hands.innerHTML = ` <img id='player-hand' class='player-hand' src='./assets/paper.png' alt='' />`
-            + `<img id='computer-hand' class='computer-hand' src='./assets/${computerChoice}.png' alt='' />`
-
+            + `<img id='computer-hand' class='computer-hand' src='./assets/${computerChoice}.png' alt='' />`;
         if (computerChoice == "paper") {
             winnerMessage.innerHTML = "no winner";
         };
@@ -85,22 +93,28 @@ playerPaper.addEventListener("click", function () {
             playerScore.innerHTML = "<h2>Player</h2>"
                 + `<p>${j}</p>`;
         };
+        playerRock.style.pointerEvents = "auto";
+        playerPaper.style.pointerEvents = "auto";
+        playerScissors.style.pointerEvents = "auto";
     });
 });
 playerScissors.addEventListener("click", function () {
-    hands.innerHTML=` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />
-    <img id="computer-hand" class="computer-hand" src="./assets/rock.png" alt="" />`;
-    let first=new Promise(function(resolve,reject){
-        hands.innerHTML=` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />
-        <img id="computer-hand" class="computer-hand shake-computer" src="./assets/rock.png" alt="" />`;
-        setTimeout(function(){
+    hands.innerHTML = ` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />`
+    + `<img id="computer-hand" class="computer-hand" src="./assets/rock.png" alt="" />`;
+    let first = new Promise(function (resolve, reject) {
+        hands.innerHTML = ` <img id="player-hand" class="player-hand shake-player" src="./assets/rock.png" alt="" />`
+        + `<img id="computer-hand" class="computer-hand shake-computer" src="./assets/rock.png" alt="" />`;
+        playerRock.style.pointerEvents = "none";
+        playerPaper.style.pointerEvents = "none";
+        playerScissors.style.pointerEvents = "none";
+        setTimeout(function () {
             resolve()
-        },1000);
+        }, 1000);
     });
-    first.then(function(){
+    first.then(function () {
         computerChoose();
         hands.innerHTML = ` <img id='player-hand' class='player-hand' src='./assets/scissors.png' alt='' />`
-            + `<img id='computer-hand' class='computer-hand' src='./assets/${computerChoice}.png' alt='' />`
+            + `<img id='computer-hand' class='computer-hand' src='./assets/${computerChoice}.png' alt='' />`;
         if (computerChoice == "scissors") {
             winnerMessage.innerHTML = "no winner";
         };
@@ -116,5 +130,8 @@ playerScissors.addEventListener("click", function () {
             playerScore.innerHTML = "<h2>Player</h2>"
                 + `<p>${j}</p>`;
         };
+        playerRock.style.pointerEvents = "auto";
+        playerPaper.style.pointerEvents = "auto";
+        playerScissors.style.pointerEvents = "auto";
     })
 });
