@@ -71,8 +71,7 @@
     justify-content: space-around;
     align-items: center;
   }
-  
-  .player-hand {
+  .player-hand{
     transform: rotateY(180deg);
   }
   
@@ -85,7 +84,16 @@
     opacity: 1;
     pointer-events: all;
   }
-  
+  .shake-player{
+    animation-name:shakePlayer;
+    animation-duration:0.5s;
+    animation-iteration-count:default;
+  }
+  .shake-computer{
+    animation-name:shakeComputer;
+    animation-duration:0.5s;
+    animation-iteration-count: default;
+  }
   @keyframes shakePlayer {
     0% {
       transform: rotateY(180deg) translateY(0px);
