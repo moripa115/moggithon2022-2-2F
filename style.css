@@ -34,6 +34,8 @@
     align-items: center;
     justify-content: space-around;
     transition: opacity 0.5s ease;
+
+    /* opacity: 0; */
   }
   
   .intro h1 {
@@ -76,10 +78,10 @@
     transform: rotateY(180deg);
   }
   
-  div.fadeOut {
+  /* div.fadeOut {
     opacity: 0;
     pointer-events: none;
-  }
+  } */
   
   div.fadeIn {
     opacity: 1;
