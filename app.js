@@ -14,7 +14,7 @@ const game = () => {
     hands.forEach(hand => {
       hand.addEventListener("animationend", function() {
         this.style.animation = "";
-        //shakeの動きが終わったときに、作動？
+        //shakeの動きが終わったときに、停止
       });
     });
 
