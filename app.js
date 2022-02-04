@@ -19,10 +19,8 @@ function computerChoose() {
     computerChoice = computerChoices[Math.floor(Math.random() * 3)];
 };
 playButton.addEventListener("click", function () {
-    console.log("ok");
     fadein.classList.add("fadeIn");
     intro.classList.add("fadeOut");
-    // 成功
 });
 playerRock.addEventListener("click", function (resolve, reject) {
     hands.innerHTML = ` <img id="player-hand" class="player-hand" src="./assets/rock.png" alt="" />
