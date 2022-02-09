@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const playerHand = document.getElementById("player-hand");
 const computerHand = document.getElementById("computer-hand");
 const playerRock = document.getElementById("rock");
@@ -134,7 +133,6 @@ playerScissors.addEventListener("click", function () {
         playerScissors.style.pointerEvents = "auto";
     })
 });
-=======
 // 三つの選択肢のどれか選んだら手が動いて何回か上下して手の形の画像入れ替え
 const game = () => {
   let pScore = 0;
@@ -181,4 +179,3 @@ const game = () => {
 };
 //start the game function
 game();
->>>>>>> 610f909853b9339bb4d5b986aa2f52e46300cacd
