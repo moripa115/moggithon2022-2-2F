@@ -2,9 +2,11 @@
 {
   let p_Score = 0;
   let c_Score = 0;
-
   function R_Click(player) {
+    let janken = ['グー','チョキ','パー',];
     let computer = Math.floor( Math.random() * 3);
+    
+
     const score = () => {
       const p = document.querySelector(".player-score p");
       const c = document.querySelector(".computer-score p");
@@ -36,36 +38,27 @@
         c_Score++;
         score();
     }
-  }
-
-    const match = () => {
-      const rock = document.getElementById("rock");
-      const paper = document.getElementById("paper");
-      const scissors = document.getElementById("scissors");
-      rock.addEventListener("click", () => {
-        R_Click(0);
-      });
-      paper.addEventListener("click", () => {
-        R_Click(2);
-      });
-      scissors.addEventListener("click", () => {
-        R_Click(1);
-      });
-    };
 
     const startGame = () => {
     const playBtn = document.querySelector(".intro button");
     const introScreen = document.querySelector(".intro");
-    const match_div = document.querySelector(".match");
+    const match = document.querySelector(".match");
+
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
-      match_div.classList.add("fadeIn");
-      match();
+      match.classList.add("fadeIn");
     });
   };
 
-  startGame();
+  const match = () => {
+    const Btn = document.querySelectorAll(".options button");
+
+    Btn.addEventListener("click", R_Click());
+  }
+  
+    startGame();
+    match();
+    // 結果を表示するためのプログラム
+    document.getElementById("Result").innerHTML = "相手は" + janken[computer] +" " + Result_end;
+  }
 }
-
-
-

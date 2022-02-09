@@ -71,28 +71,19 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.player-hand{
+
+.player-hand {
   transform: rotateY(180deg);
 }
 
-.fadeOut {
+div.fadeOut {
   opacity: 0;
   pointer-events: none;
 }
 
-.fadeIn {
+div.fadeIn {
   opacity: 1;
   pointer-events: all;
-}
-.shake-player{
-  animation-name:shakePlayer;
-  animation-duration:0.5s;
-  animation-iteration-count:default;
-}
-.shake-computer{
-  animation-name:shakeComputer;
-  animation-duration:0.5s;
-  animation-iteration-count: default;
 }
 
 @keyframes shakePlayer {
@@ -126,7 +117,6 @@ section {
 }
 
 @keyframes shakeComputer {
-  
   0% {
     transform: translateY(0px);
   }
