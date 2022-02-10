@@ -3,77 +3,67 @@ let choices = [
 ];
 let playerChoice = [];//playerの選択肢
 let computerChoice = [];//computerの選択肢
-const text = document.getElementsByClassName("text");
-const endgame = document.getElementsByClassName("endgame");
+const text = document.getElementById("text");
+const endgame = document.getElementById("endgame");
 function judge(e) {
     if (e == playerChoice) {
         if (e.includes(0) && e.includes(1) && e.includes(2)) {
-            endgame.style.display="block";
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(3) && e.includes(4) && e.includes(5)) {
-            endgame.style.display="block";
+        } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(6) && e.includes(7) && e.includes(8)) {
-            endgame.style.display="block";
+        } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(0) && e.includes(3) && e.includes(6)) {
-            endgame.style.display="block";
+        } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(1) && e.includes(4) && e.includes(7)) {
-            endgame.style.display="block";
+        } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(2) && e.includes(5) && e.includes(8)) {
-            endgame.style.display="block";
+        } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(0) && e.includes(4) && e.includes(8)) {
-            endgame.style.display="block";
+        } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
-        if (e.includes(2) && e.includes(4) && e.includes(6)) {
-            endgame.style.display="block";
+        } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
+            endgame.style.display = "block";
             text.innerHTML = "player wins";
-        };
+        } else if (choices.length <= 0) {
+            endgame.style.display = "block";
+            text.innerHTML = "no winner";
+        }
     } else if (e == computerChoice) {
         if (e.includes(0) && e.includes(1) && e.includes(2)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(3) && e.includes(4) && e.includes(5)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(6) && e.includes(7) && e.includes(8)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(0) && e.includes(3) && e.includes(6)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(1) && e.includes(4) && e.includes(7)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(2) && e.includes(5) && e.includes(8)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(0) && e.includes(4) && e.includes(8)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-        if (e.includes(2) && e.includes(4) && e.includes(6)) {
-            endgame.style.display="block";
-            text.innerHTML="computer wins";
-        };
-    } else {
-        return 0;
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
+            endgame.style.display = "block";
+            text.innerHTML = "computer wins";
+        } else if (choices.length <= 0) {
+            endgame.style.display = "block";
+            text.innerHTML = "no winner";
+        }
     }
 }
 function player(i) {
@@ -91,9 +81,7 @@ function player(i) {
         console.log(`プレイヤー${playerChoice}`);
         console.log(`選択肢一覧${choices}`);
         judge(playerChoice);
-    } else if (choices.length = 0 && judge(playerChoice) == 0) {
-        endgame.style.display="block";
-        text.innerHTML="no winner";
+        console.log(choices.length);
     }
 }
 function computer() {
@@ -109,9 +97,7 @@ function computer() {
         console.log(`コンピュータ${computerChoice}`);
         console.log(`選択肢一覧${choices}`);
         judge(computerChoice);
-    } else if (choices.length = 0 && judge(playerChoice) == 0) {
-        endgame.style.display="block";
-        text.innerHTML="no winner";
+        console.log(choices.length);
     }
 }
 for (let i = 0; i <= 8; i++) {
@@ -119,4 +105,15 @@ for (let i = 0; i <= 8; i++) {
         player(i);
         computer();
     })
+}
+function startGame() {
+    choices = [0, 1, 2, 3, 4, 5, 6, 7, 8,];
+    playerChoice = [];
+    computerChoice = [];
+    for (let i = 0; i <= 8; i++) {
+        document.getElementById(i).innerHTML = "";
+        document.getElementById(i).style.pointerEvents = "auto";
+    }
+    text.innerHTML = "";
+    endgame.style.display = "none";
 }
