@@ -99,8 +99,15 @@ function player(i) {
         judge(playerChoice);
     }
 }
+//コンピュータのアルゴリズム
+//可能な動きをすべて試す。
+//この時点でプレイヤーがあと一手で勝てる状態の場合コンピュータがこのターンで勝てる動きには10をつける。
+//このターンで勝てなかった場合、プレーヤーが次のターンで勝てるか判断するために可能な動きをすべて試す。
+//プレーヤーが勝ったら-10のスコア。プレーヤーが勝たなかったら0でコンピュータはランダム。
+//スコアが0か10になるような選択をするようにする。if(10){配列random}else if(0){配列random}else if(-10){配列random}
 function computer() {
     if (choices.length > 0) {
+        
         let computerChose = choices[Math.floor(Math.random() * choices.length)];
         let index = choices.indexOf(computerChose);
         document.getElementById(computerChose).innerHTML = "×";
