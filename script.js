@@ -6,63 +6,81 @@ let computerChoice = [];//computerの選択肢
 const text = document.getElementById("text");
 const endgame = document.getElementById("endgame");
 function judge(e) {
-    if (e == playerChoice) {
-        if (e.includes(0) && e.includes(1) && e.includes(2)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
-            endgame.style.display = "block";
-            text.innerHTML = "player wins";
-        } else if (choices.length <= 0) {
-            endgame.style.display = "block";
-            text.innerHTML = "no winner";
-        }
-    } else if (e == computerChoice) {
-        if (e.includes(0) && e.includes(1) && e.includes(2)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
-            endgame.style.display = "block";
-            text.innerHTML = "computer wins";
-        } else if (choices.length <= 0) {
-            endgame.style.display = "block";
-            text.innerHTML = "no winner";
+    for (let i = 0; i <= 8; i++) {
+        if (e == playerChoice) {
+            if (e.includes(0) && e.includes(1) && e.includes(2)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
+                endgame.style.display = "block";
+                text.innerHTML = "player wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (choices.length <= 0) {
+                endgame.style.display = "block";
+                text.innerHTML = "no winner";
+            }
+        } else if (e == computerChoice) {
+            if (e.includes(0) && e.includes(1) && e.includes(2)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(3) && e.includes(4) && e.includes(5)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(6) && e.includes(7) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(0) && e.includes(3) && e.includes(6)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(1) && e.includes(4) && e.includes(7)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(2) && e.includes(5) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(0) && e.includes(4) && e.includes(8)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (e.includes(2) && e.includes(4) && e.includes(6)) {
+                endgame.style.display = "block";
+                text.innerHTML = "computer wins";
+                document.getElementById(i).style.pointerEvents = "none";
+            } else if (choices.length <= 0) {
+                endgame.style.display = "block";
+                text.innerHTML = "no winner";
+            }
         }
     }
 }
@@ -78,10 +96,7 @@ function player(i) {
         //choices配列から消す
         playerChoice.push(i);
         //playerChoices配列に選んだマスの番号を追加する
-        console.log(`プレイヤー${playerChoice}`);
-        console.log(`選択肢一覧${choices}`);
         judge(playerChoice);
-        console.log(choices.length);
     }
 }
 function computer() {
@@ -94,10 +109,7 @@ function computer() {
         //配列にコンピュータの選んだマスを追加する
         document.getElementById(computerChose).style.pointerEvents = "none";
         choices.splice(index, 1);
-        console.log(`コンピュータ${computerChoice}`);
-        console.log(`選択肢一覧${choices}`);
         judge(computerChoice);
-        console.log(choices.length);
     }
 }
 for (let i = 0; i <= 8; i++) {
