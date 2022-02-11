@@ -42,7 +42,7 @@ function judge(e) {
 }
 function player(i) {
     if (choices.length > 0) {
-        //各マスクリック時の処理
+        //各マスクリック時の処り
         document.getElementById(i).innerHTML = "〇";
         //選んだマスに〇つける
         document.getElementById(i).style.pointerEvents = "none";
