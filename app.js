@@ -169,14 +169,14 @@ const game = () => {
           computerHand.src = `./assets/${computerChoice}.png`;
         },2000);
 
-        //shake CSSと連動させる
-        playerHand.style.animation = "shakePlayer 2s ease";
-        computerHand.style.animation = "shakeComputer 2s ease";
-      });
-    });
-  };
-  playMatch();
-};
-//start the game function
-game();
-//////////////////////////////////////////////////////////////////////////////
+//         //shake CSSと連動させる
+//         playerHand.style.animation = "shakePlayer 2s ease";
+//         computerHand.style.animation = "shakeComputer 2s ease";
+//       });
+//     });
+//   };
+//   playMatch();
+// };
+// //start the game function
+// game();
+//egagheuaihugeg
