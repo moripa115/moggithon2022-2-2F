@@ -179,3 +179,4 @@ playerScissors.addEventListener("click", function () {
 // };
 // //start the game function
 // game();
+//egagheuaihugeg
