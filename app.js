@@ -5,7 +5,7 @@ const playerPaper = document.getElementById("paper");
 const playerScissors = document.getElementById("scissors");
 const winnerMessage = document.getElementById("winner");
 const playButton = document.getElementById("play-button");
-const fadein = document.getElementById("fadein");
+const fadeIn = document.getElementById("fade-in");
 const intro = document.getElementById("intro");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
@@ -19,7 +19,7 @@ function computerChoose() {
     computerChoice = computerChoices[Math.floor(Math.random() * 3)];
 };
 playButton.addEventListener("click", function () {
-    fadein.classList.add("fadeIn");
+    fadeIn.classList.add("fadeIn");
     intro.classList.add("fadeOut");
 });
 playerRock.addEventListener("click", function (resolve, reject) {
