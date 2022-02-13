@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const playerHand = document.getElementById("player-hand");
 const computerHand = document.getElementById("computer-hand");
 const playerRock = document.getElementById("rock");
@@ -137,46 +139,83 @@ playerScissors.addEventListener("click", function () {
 const game = () => {
   let pScore = 0;
   let cScore = 0;
+>>>>>>> 1a6c0ca5611fb879791d8f6e4aea1b1dbeff90aa
 
-  //Play Match
-  const playMatch = () => {
-    const options = document.querySelectorAll(".options button");
-    //グーチョキパーの3つのボタンを受取る
-    const playerHand = document.querySelector(".player-hand");
-    const computerHand = document.querySelector(".computer-hand");
-    const hands = document.querySelectorAll(".hands img");
+{
+  let p_Score = 0;
+  let c_Score = 0;
 
-    hands.forEach(hand => {
-      hand.addEventListener("animationend", function() {
-        this.style.animation = "";
-        //shakeの動きが終わったときに、停止
+  function R_Click(player) {
+    let computer = Math.floor( Math.random() * 3);
+    const score = () => {
+      const p = document.querySelector(".player-score p");
+      const c = document.querySelector(".computer-score p");
+      p.textContent = p_Score;
+      c.textContent = c_Score;
+    };
+
+    //勝ち負けの判定
+    if (computer === player) {
+        Result_end = "あいこ";
+    }
+    else if(player === 0 && computer === 1) {
+        Result_end = "あなたの勝ち";
+        p_Score++;
+        score();
+    }
+    else if(player === 1 && computer === 2) {
+        Result_end = "あなたの勝ち";
+        p_Score++;
+        score();
+    }
+    else if(player === 2 && computer === 0) {
+        Result_end = "あなたの勝ち";
+        p_Score++;
+        score();
+    }
+    else {
+        Result_end = "あなたの負け";
+        c_Score++;
+        score();
+    }
+  }
+
+    const match = () => {
+      const rock = document.getElementById("rock");
+      const paper = document.getElementById("paper");
+      const scissors = document.getElementById("scissors");
+      rock.addEventListener("click", () => {
+        R_Click(0);
       });
-    });
-
-    //computer options
-    const computerOptions = ["rock", "paper", "scissors"];
-
-    options.forEach((option) => {
-      option.addEventListener("click", function () {
-        //computer choice
-        const computerNumber = Math.floor(Math.random() * 3);
-        const computerChoice = computerOptions[computerNumber];
-        
-        setTimeout(() => {
-          //押したボタンに合わせて画像変更
-          playerHand.src = `./assets/${this.textContent}.png`;
-            //thisにはグーかチョキかパーが入る、それを.textContentで文字列として取得する
-          computerHand.src = `./assets/${computerChoice}.png`;
-        },2000);
-
-        //shake CSSと連動させる
-        playerHand.style.animation = "shakePlayer 2s ease";
-        computerHand.style.animation = "shakeComputer 2s ease";
+      paper.addEventListener("click", () => {
+        R_Click(2);
       });
+      scissors.addEventListener("click", () => {
+        R_Click(1);
+      });
+    };
+
+    const startGame = () => {
+    const playBtn = document.querySelector(".intro button");
+    const introScreen = document.querySelector(".intro");
+    const match_div = document.querySelector(".match");
+    playBtn.addEventListener("click", () => {
+      introScreen.classList.add("fadeOut");
+      match_div.classList.add("fadeIn");
+      match();
     });
   };
+<<<<<<< HEAD
+
+  startGame();
+}
+
+
+
+=======
   playMatch();
 };
 //start the game function
 game();
 // aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+>>>>>>> 1a6c0ca5611fb879791d8f6e4aea1b1dbeff90aa
