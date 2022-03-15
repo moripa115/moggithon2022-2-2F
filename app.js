@@ -179,4 +179,3 @@ const game = () => {
 };
 //start the game function
 game();
-// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
